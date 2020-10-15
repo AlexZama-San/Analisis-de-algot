@@ -27,9 +27,16 @@ public class Burbuja
       int arreglo[] = {8,6,7,2,1,8,6,8,7,1,9,7,7,10};
       int arregloOrdenado[] = ejecutaProceso1(arreglo);
  
-      //imprimimos el arreglo ordenado.
-      for(int i = 0; i < arregloOrdenado.length;i++)
-        System.out.println(arregloOrdenado[i]);
+
+      long tiempoejecuini=System.currentTimeMillis();
+      arregloOrdenado = ejecutaProceso1(arreglo);
+            //imprimimos el arreglo ordenado.
+            for(int i = 0; i < arregloOrdenado.length;i++){
+              System.out.println(arregloOrdenado[i]);
+            }
+      long tiempoejecutotal=System.currentTimeMillis()-tiempoejecuini;
+      System.out.println("el tiempo de ejecucion es "+tiempoejecutotal+" mili segundos");
     }
+
 }
 //micodigoholaxD
