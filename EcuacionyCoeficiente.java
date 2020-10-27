@@ -30,6 +30,6 @@ public class EcuacionyCoeficiente {
     
     }
     public static void CoeficienteLineal(){
-
+        Metodos xD = new Metodos();
     }
 }
