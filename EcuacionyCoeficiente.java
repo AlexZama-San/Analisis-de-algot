@@ -1,7 +1,7 @@
 
 public class EcuacionyCoeficiente {
 
-    public static void main(String []args){
+    public static void EcuacionLineal(){
         Metodos xD = new Metodos();
         //obtencion de vectores
     int[] x={100,90,80,45,50,50,60,40,25,20};
@@ -16,17 +16,20 @@ public class EcuacionyCoeficiente {
     int sumay=xD.Recorreysuma(y);
     int sumax2=xD.Recorreysuma(x2);
     int sumaxy=xD.Recorreysuma(xy);
-    int suma1=xy.length*(sumaxy);
-    int suma2=sumax*sumay;
-    int suma3=x2.length*(sumax2);
-    int suma4=(sumax)*sumax;
-    float ecua1=suma1-suma2;
-    float ecua2=suma3-suma4;
-    float a=ecua1/ecua2;
+    //sumas de formula a
+    float suma1=xy.length*(sumaxy);
+    float suma2=sumax*sumay;
+    float suma3=x2.length*(sumax2);
+    float suma4=(sumax)*sumax;
+    float a=(suma1-suma2)/(suma3-suma4);
+    //sumas de formula b
     float suma5=a*sumax;
     float b=sumay-suma5;
     b=b/x.length;
     System.out.println("y="+a+"x+"+b);
     
+    }
+    public static void CoeficienteLineal(){
+
     }
 }
