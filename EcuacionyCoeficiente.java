@@ -39,9 +39,11 @@ public class EcuacionyCoeficiente {
         float[] xc={100,90,80,45,50,50,60,40,25,20};
         float[] xcc={100,90,80,45,50,50,60,40,25,20};
         float[] y={3,5,9,10,20,21,24,24,27,35};
-        
+        float[] xmenosx2=xD.mediaX2(xc);
+        for(float imp:xmenosx2)
+        System.out.println(imp);
     }
     public static void main(String []args) {
-        EcuacionLineal();
+        CoeficienteLineal();
     }
 }

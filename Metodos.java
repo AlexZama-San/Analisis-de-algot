@@ -1,3 +1,5 @@
+import java.util.Vector;
+
 public class Metodos {
     public float Recorreysuma(float[] x){
         float suma=0;
@@ -22,5 +24,15 @@ public class Metodos {
     public float RegladeTres(float x,float y){
         float result=(y*100)/x;
         return result;
+    }
+    public float[] mediaX2(float[] x){
+        float sumatot=Recorreysuma(x);
+        float[] mediaXX2=x;
+        for(int cont=0;cont<x.length;cont++){
+            float mediaX=(x[cont]-(sumatot/x.length));
+            mediaX= (float) Math.pow(mediaX,2);
+            mediaXX2[cont]=mediaX;
+        }
+        return mediaXX2;
     }
 }
