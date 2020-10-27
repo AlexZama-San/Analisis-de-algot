@@ -19,4 +19,8 @@ public class Metodos {
         }
         return zc;
     }
+    public float RegladeTres(float x,int y){
+        float result=(y*100)/x;
+        return result;
+    }
 }
