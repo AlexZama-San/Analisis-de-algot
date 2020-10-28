@@ -58,6 +58,7 @@ public class EcuacionyCoeficiente {
         System.out.println("el coeficiente lineal es igual a "+r);
     }
     public static void main(String []args) {
+        EcuacionLineal();
         CoeficienteLineal();
     }
 }
