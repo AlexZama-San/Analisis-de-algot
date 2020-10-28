@@ -1,4 +1,3 @@
-import java.util.Vector;
 
 public class Metodos {
     public float Recorreysuma(float[] x){
@@ -25,7 +24,7 @@ public class Metodos {
         float result=(y*100)/x;
         return result;
     }
-    public float[] mediaX2(float[] x){
+    public float[] MediaX2(float[] x){
         float sumatot=Recorreysuma(x);
         float[] mediaXX2=x;
         for(int cont=0;cont<x.length;cont++){
@@ -34,5 +33,27 @@ public class Metodos {
             mediaXX2[cont]=mediaX;
         }
         return mediaXX2;
+    }
+    public float[] MediaY2(float[] y){
+        float sumatot=Recorreysuma(y);
+        float[] mediaYY2=y;
+        for(int cont=0;cont<y.length;cont++){
+            float mediaY=(y[cont]-(sumatot/y.length));
+            mediaY=(float) Math.pow(mediaY, 2);
+            mediaYY2[cont]=mediaY;
+        }
+        return mediaYY2;
+    }
+    public float[] Mediaxpormediay(float[] x,float[] y){
+        float sumatotx=Recorreysuma(x);
+        float sumatoty=Recorreysuma(y);
+        float[] mediaXporMediaY=x;
+        for(int cont=0;cont<x.length;cont++){
+            float mediaX=(x[cont]-(sumatotx/x.length));
+            float mediaY=(y[cont]-(sumatoty/y.length));
+            float xpory=mediaX*mediaY;
+            mediaXporMediaY[cont]=xpory;
+        }
+        return mediaXporMediaY;
     }
 }

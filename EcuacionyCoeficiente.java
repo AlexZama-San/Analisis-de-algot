@@ -35,13 +35,27 @@ public class EcuacionyCoeficiente {
     }
     public static void CoeficienteLineal(){
         Metodos xD = new Metodos();
+        Vector<Float> sumastot=new Vector<Float>(5,1);
+        //obtencion de Arreglos
         float[] x={100,90,80,45,50,50,60,40,25,20};
+        sumastot.add(xD.Recorreysuma(x));
         float[] xc={100,90,80,45,50,50,60,40,25,20};
         float[] xcc={100,90,80,45,50,50,60,40,25,20};
         float[] y={3,5,9,10,20,21,24,24,27,35};
-        float[] xmenosx2=xD.mediaX2(xc);
-        for(float imp:xmenosx2)
-        System.out.println(imp);
+        sumastot.add(xD.Recorreysuma(y));
+        float[] yc={3,5,9,10,20,21,24,24,27,35};
+        float[] ycc={3,5,9,10,20,21,24,24,27,35};
+        float[] xmenosx2=xD.MediaX2(xc);
+        sumastot.add(xD.Recorreysuma(xmenosx2));
+        float[] ymenosy2=xD.MediaY2(yc);
+        sumastot.add(xD.Recorreysuma(ymenosy2));
+        float[] xporY=xD.Mediaxpormediay(xcc, ycc);
+        sumastot.add(xD.Recorreysuma(xporY));
+        //formula del coeficiente
+        float raizX=(float) Math.sqrt(sumastot.get(2));
+        float raizY=(float) Math.sqrt(sumastot.get(3));
+        float r=sumastot.get(4)/(raizX*raizY);
+        System.out.println("el coeficiente lineal es igual a "+r);
     }
     public static void main(String []args) {
         CoeficienteLineal();
