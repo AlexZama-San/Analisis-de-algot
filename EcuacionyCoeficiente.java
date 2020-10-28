@@ -36,7 +36,7 @@ public class EcuacionyCoeficiente {
     public static void CoeficienteLineal(){
         Metodos xD = new Metodos();
         Vector<Float> sumastot=new Vector<Float>(5,1);
-        //obtencion de Arreglos
+        //obtencion de Arreglos y sumas totales
         float[] x={100,90,80,45,50,50,60,40,25,20};
         sumastot.add(xD.Recorreysuma(x));
         float[] xc={100,90,80,45,50,50,60,40,25,20};
