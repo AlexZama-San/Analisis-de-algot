@@ -4,11 +4,11 @@ public class Tomates {
     public static void main(String []args){
         Scanner lector=new Scanner(System.in);
         Metodos xD=new Metodos();
-        System.out.println("introdusca la produccion total de tomates en Mexico");
+        System.out.println("introduzca la produccion total de tomates en Mexico");
         int mt=lector.nextInt();
-        System.out.println("introdusca la produccion total de tomates en USA");
+        System.out.println("introduzca la produccion total de tomates en USA");
         int ust=lector.nextInt();
-        System.out.println("introdusca la produccion total de tomates en Canada");
+        System.out.println("introduzca la produccion total de tomates en Canada");
         int ct=lector.nextInt();
         float sumtot=mt+ust+ct;
         float porceM= xD.RegladeTres(sumtot, mt);
